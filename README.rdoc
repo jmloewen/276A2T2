@@ -2,15 +2,25 @@ Gonna be honest, this doesn't have a ton of features.
 
 Outstanding features:
 -Doesn't look like complete cancer.
+
 -Border-Radius:10px
+
 -Border size increases with GPA
+
 -Students are ordered in descending order by GPA.  I mean yeah, I could've done it alphabetically, but that would actually make sense.
+
 -Proper Form validation
+
 -Edit, Destroy, View
+
 -All colors I put in my drop-down actually work properly.
+
 -Border-Radius:10px.
+
 -Oh yeah, also the GPA goes up by increments of 0.1 - i guess maybe it shouldve been by increments of 0.01, but really, does anyone care that much?
+
 -How did that one guy get over 100 percentin  the first assignment?  I'm totally jealous.  I wouldve put more effort into it if i had known that I could get over 100.
+
 -Oh yeah, it's ACTUALLY ON HEROKU.  Seriously, anyone who managed to navigate through Heroku's cancerous website and upload their page from a Windows machine deserves full marks for effort.  How does Heroku even make money?  Their product is godawful.  It has insufficient documentation, it provides false positives for an upload, saying that it loaded properly when it didn't, and its error messages are cryptic at best.  Why is this company still in business?  Bobby, if you're reading this, please find a better solution for the next people who take this course.
 
 That's kinda it.  There isn't a ton to document here - it's just a bunch of css markup combined with the blog tutorial from the rails website.
