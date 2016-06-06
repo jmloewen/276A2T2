@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'display/index'
 
   get 'students/index'
+  
+  
 
   resources :students
   
