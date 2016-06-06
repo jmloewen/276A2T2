@@ -1,36 +1,38 @@
-<h1>StudentDB</h1>
-<p>An Index of Students for visualizing... semi-useful things.</p>
-<!--Commenting on HTML pages is disgusting, so I'll leave my comments at the top of pages.
-This is pretty simple - no big features.  GPA determines border size, have height and width, color integrated into the boxes, etc.
-Display seems superfluous, so the user can only use Edit and Delete - there is a minimum size of 90px height and width.
-Height and Weight are proportional from there, are meant to be a comparison between people rather than an actual measurement.-->
-
-<%= link_to 'New Student?', new_student_path %>
- <br/>
-<div style="display:inline; ">
-  <% @students.each do |student| %>
-  <span style="display:none">
-    <%=
-    borwidth = 5 * student.gpa
-    swidth= 2 * student.weight
-    sheight = 3 * student.height
-    bckC = '#ffffff'
-    if student.gpa >= 4 then
-        bckC = '#ffd700'
-    elsif student.gpa <= 2 then
-        bckC = '#D3D3D3'
-    end
-    %>
-    </span>
-  <div style="min-width: 90px;  min-height: 90px;line-height: 50%; padding: 10px;display:inline-block; color:<%=student.color%>; border: <%=borwidth%>px solid <%=student.color%>; height:<%=sheight%>px; width:<%=swidth%>px;">
+<div style="font-family:Helvetica; Border-radius: 20px; padding: 20px; border: double 3px black; background-color:rgb(122,22,29)">
+  <h1>StudentDB</h1>
+  <p>An Index of Students for visualizing... semi-useful things.</p>
+  <!--Commenting on HTML pages is disgusting, so I'll leave my comments at the top of pages.
+  This is pretty simple - no big features.  GPA determines border size, have height and width, color integrated into the boxes, etc.
+  Display seems superfluous, so the user can only use Edit and Delete - there is a minimum size of 90px height and width.
+  Height and Weight are proportional from there, are meant to be a comparison between people rather than an actual measurement.-->
   
-    <p><%= student.stdName %></p>
-    <p><%= student.gpa %>    </p>
-      <%= link_to 'Edit', edit_student_path(student) %>
-      <%= link_to 'Destroy', student_path(student),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-      
+  <p style="background-color:white; border-radius: 8px; display:inline;"><%= link_to 'Add A New Student?', new_student_path %></p>
+   <br/>
+  <div style="display:inline; ">
+    <% @students.each do |student| %>
+    <span style="display:none">
+      <%=
+      borwidth = 5 * student.gpa
+      swidth= 2 * student.weight
+      sheight = 3 * student.height
+      bckC = '#ffffff'
+      if student.gpa >= 4 then
+          bckC = '#ffd700'
+      elsif student.gpa <= 2 then
+          bckC = '#D3D3D3'
+      end
+      %>
+      </span>
+    <div style="min-width: 90px; border-radius:10px;  min-height: 90px;line-height: 50%; padding: 10px;display:inline-block; color:<%=student.color%>; border: <%=borwidth%>px solid <%=student.color%>; height:<%=sheight%>px; width:<%=swidth%>px;">
+    
+      <p><%= student.stdName %></p>
+      <p><%= student.gpa %>    </p>
+        <%= link_to 'Edit', edit_student_path(student) %>
+        <%= link_to 'Destroy', student_path(student),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+        
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>

@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all
+    @students = Student.all.order("gpa DESC")
+      
   end
   def display
     get './display'

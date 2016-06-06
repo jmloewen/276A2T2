@@ -1,3 +1,4 @@
+<div style="border-radius: 10px; padding: 10px; width: 20%; background-color:rgb(38,81,108)">
 <%= form_for @student do |f| %>
  
   <% if @student.errors.any? %>
@@ -15,7 +16,7 @@
   <% end %>
  
   <p>
-    <%= f.label :stdName %><br>
+    Name<br>
     <%= f.text_field :stdName %>
   </p>
  
@@ -45,3 +46,4 @@
   </p>
  
 <% end %>
+</div>
