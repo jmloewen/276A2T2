@@ -1,25 +1,12 @@
-<h1>Students#index</h1>
-<p>An Index of Students.</p>
+<h1>StudentDB</h1>
+<p>An Index of Students for visualizing... semi-useful things.</p>
 <!--Commenting on HTML pages is disgusting, so I'll leave my comments at the top of pages.
 This is pretty simple - no big features.  GPA determines border size, have height and width, color integrated into the boxes, etc.
 Display seems superfluous, so the user can only use Edit and Delete - there is a minimum size of 90px height and width.
 Height and Weight are proportional from there, are meant to be a comparison between people rather than an actual measurement.-->
 
-<%= link_to 'New Student', new_student_path %>
-
-<h1>Displaying Students</h1>
- 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Height</th>
-    <th>Weight</th>
-    <th>GPA</th>
-    <th>Favorite Color</th>
-    <th colspan="2"></th>
-  </tr>
- 
-</table>
+<%= link_to 'New Student?', new_student_path %>
+ <br/>
 <div style="display:inline; ">
   <% @students.each do |student| %>
   <span style="display:none">
