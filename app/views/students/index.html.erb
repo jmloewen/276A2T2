@@ -1,0 +1,33 @@
+<h1>Students#index</h1>
+<p>An Index of Students.</p>
+
+<%= link_to 'New Student', new_student_path %>
+<%= link_to 'Display Students', 'display' %>
+
+<h1>Listing Students</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>GPA</th>
+    <th>Favorite Color</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= student.stdName %></td>
+      <td><%= student.height %></td>
+      <td><%= student.weight %></td>
+      <td><%= student.gpa %></td>
+      <td><%= student.color %></td>
+      <td><%= link_to 'Show', student_path(student) %></td>
+      <td><%= link_to 'Edit', edit_student_path(student) %></td>
+      <td><%= link_to 'Destroy', student_path(student),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

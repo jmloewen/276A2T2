@@ -1,0 +1,47 @@
+<%= form_for @student do |f| %>
+ 
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@student.errors.count, "error") %> prohibited
+        this student from being saved:
+      </h2>
+      <ul>
+        <% @student.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :stdName %><br>
+    <%= f.text_field :stdName %>
+  </p>
+ 
+  <p>
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight, :class=>'number_field_tag', :step=> 1, :min=>1, :max => 150  %>
+  </p>
+  
+  <p>
+    <%= f.label :height %><br>
+    <%= f.number_field :height, :class=>'number_field_tag', :step=> 1, :min=>1, :max => 220  %>
+  </p>
+  
+  <p>
+    <%= f.label :gpa %><br>
+    <%= f.number_field :gpa, :class=>'number_field_tag', :step=> 0.1, :min=>0, :max => 4.5  %>
+  </p>
+  
+  <p>
+    <%= f.label :color %> <br>
+    <%= f.select :color, [['red', 'red'], ['green','green'], ['blue','blue'], ['yellow','yellow'], ['brown','brown'], ['pink','pink'], ['cyan','cyan'], ['magenta','magenta'], ['orange','orange'], ['grey','grey'], ['black','black'], ['white','white']] %>
+  </p>
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
