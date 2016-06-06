@@ -13,7 +13,7 @@ default: &default
 development:
   adapter: postgresql
   <<: *default
-  database: mypgdb
+  database: mypgdb2
   pool: 5
   timeout: 5000
 
@@ -23,13 +23,13 @@ development:
 test:
   adapter: postgresql
   <<: *default
-  database: mypgdb
+  database: mypgdb2
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   <<: *default
-  database: mypgdb
+  database: mypgdb2
   pool: 5
   timeout: 5000
